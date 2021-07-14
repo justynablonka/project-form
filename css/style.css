@@ -1,0 +1,225 @@
+.outerContainer {
+    position: absolute;
+    display: flex;
+    width: 500px;
+    height: 500px;
+    flex-direction: column;
+    background-image: url("../img/photo.jpg");
+    background-size: cover;
+    padding: 47px 45px;
+}
+
+.innerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 37px 10px 30px 10px;
+    font-family: "Open Sans Light", sans-serif;
+    color: #ffffffb4;
+    background-color: rgb(3,6,15, 0.8);
+    height: 500px;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0px;
+    font-size: 36px;
+}
+
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+    font-size: 25px;
+    line-height: 1.15em;
+}
+
+.highlight {
+    font-family: "Open Sans Semi Bold", sans-serif;
+    color: #2f9766;
+}
+ 
+.dataContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    color: #ffffffb4;
+}
+
+input[type="email"],
+input[type="text"] {
+    display: inline-block;
+    text-transform: uppercase;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 4px solid #ffffffb4;
+    margin: 10px 10px;
+    padding: 10px 0px;
+    font-size: 24px;
+}
+
+input[type="email"] {
+    width: 60%;
+}
+
+input[type="text"] {
+    width: 30%;
+}
+
+input[type=email]:focus,
+input[type=text]:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: #ffffffb4;
+}
+
+.agreementContainer {
+    padding: 20px 10px 10px 10px;
+}
+
+.checkboxContainer {
+    display: block;
+    position: relative;
+    padding-left: 50px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkboxContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    border:#ffffffb4 1px solid;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkboxContainer input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkboxContainer .checkmark:after {
+    left: 14px;
+    top: 4px;
+    width: 10px;
+    height: 22px;
+    border: solid #ffffffb4;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+label[for="agreement"] {
+    font-size: 14px;
+    line-height: 16px;
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: left;
+    /* for IE9 */
+    -ms-text-align-last:center;
+}
+
+.button {
+    font-family: "Open Sans Light", sans-serif;
+    text-decoration: none;
+    text-align: center;
+    width: 180px;
+    font-size: 30px;
+    color: #2d295c;
+    background-color: #ffffffb4;
+    border: none;
+    cursor: pointer;
+    padding: 10px 50px;
+    margin: 30px auto 5px auto;
+    font-weight: 750;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background-color: #17361c;
+    color: #ffffffb4;
+    transition: 0.4s;
+}
+
+input[type=email].error,
+input[type=text].error,
+.checkmark.error {
+    border-color: #536dc3;
+}
+
+.error::placeholder {
+    color: #536dc3;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    font-size: 12px;
+    background-color: rgb(3,6,15, 0.8);
+    color: #ffffffb4;
+    text-align: center;
+    padding: 5px 5px;
+    margin: 5px 5px;
+    position: absolute;
+    z-index: 1;
+}
+  
+.agreementContainer:hover .tooltiptext {
+    visibility: visible;
+}
+
+.thankYouContainer {
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgb(3,6,15, 0.8);
+    height: 500px;
+}
+
+.thankYouContainer,
+.innerContainer {
+    display: none;
+}
+
+.thankYouContainer.visible,
+.innerContainer.visible {
+    display: flex;
+}
+
+#thankYouPar {
+    text-align: center;
+    font-family: "Open Sans Light", sans-serif;
+    font-size: 24px;
+    color: #ffffffb4;
+}
+
+#thankYouPar > span {
+    font-weight: 600;
+    text-transform: uppercase;
+}

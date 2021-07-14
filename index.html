@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularz</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="outerContainer">
+
+        <form id="discountForm" class="innerContainer visible" action="" method="POST">
+            <h1>Hej!</h1>
+            <h2>Zapisz się do newslettera <br/>i zgarnij <span class="highlight">zniżkę 20zł</span><br/> do wykorzystania przy<br/>
+                najbliższych zakupach</h2>
+            <div class="dataContainer">
+                <input type="email" name="email" id="email" placeholder="E-mail">
+                <input type="text" name="name" id="name" placeholder="Imię">
+            </div>
+            <div class="agreementContainer">
+                <label class="checkboxContainer" for="agreement">
+                    Wyraź zgodę na przetwarzanie danych osobowych.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Enim quisquam blanditiis cupiditate facere unde earum incidunt, quia aperiam labore eaque!
+                    <input type="checkbox" name="agreement" id="agreement">
+                    <span class="checkmark"></span>
+                </label>
+                <span class="tooltiptext">Zgoda jest obowiązkowa!</span>
+            </div>
+            <input type="submit" value="Wyślij" class="button">
+        </form>
+
+        <div class="thankYouContainer">
+            <p id="thankYouPar">Dziękujemy za wypełnienie formularza, <span id="submittedName" class="highlight"></span>! Potwierdź że Twój email to <span id="submittedEmail" class="highlight"></span>, <br/>klikając poniższy przycisk:</p>
+            <a href="https://github.com/justynablonka/" class="button">Potwierdź</a>
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
